@@ -14,7 +14,13 @@
 <div class="section">
 
 <?php
-	echo "Thank you for booking your trip to $_GET[location] on $_GET[date], $_GET[email]\n";
+
+//Create proper variables and fill using $_GET instead of one-shotting
+$location=$_GET["location"];
+$date=$_GET["date"];
+$email=$_GET["email"];
+
+	echo "Thank you for booking your trip to " . $location . " on " . $date . ", " . $email . ".\n";
 	echo "<br>";
 	echo "We will be in touch prior to your booking to arrange your outing.";
 ?>
